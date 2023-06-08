@@ -1,0 +1,35 @@
+{
+    "rules": [
+      {
+        "conditions": [
+          {
+            "field": "From",
+            "predicate": "contains",
+            "value": "<noreply@dare2compete.news>"
+          },
+          {
+            "field": "Subject",
+            "predicate": "equals",
+            "value": "Job at Mercedes-Benz @ ₹6 LPA | Apply Now!"
+          },
+          {
+            "field": "Date Received",
+            "predicate": "less_than",
+            "value": "4"
+          }
+        ],
+        "predicate": "All",
+        "actions": [
+          {
+            "action": "mark_as_read",
+            "value": "False"
+          },
+          {
+            "action": "move_to_folder",
+            "value": "IMPORTANT"
+          }
+        ]
+      }
+    ]
+  }
+  
